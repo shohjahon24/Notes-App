@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.ui.note.NoteFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="16dp"
+            android:src="@drawable/arrow_right"/>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="16dp"
+            android:src="@drawable/ic_image"/>
+        <ImageView
+            android:id="@+id/save"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:padding="16dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_tick"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <AutoCompleteTextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:padding="8dp"
+        android:layout_margin="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textSize="16sp"
+        android:hint="Title"
+        android:lines="1"
+        android:maxLength="40"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_search"
+        android:cursorVisible="false"
+        android:inputType="textVisiblePassword" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:overScrollMode="never"
+        tools:listitem="@layout/item_image"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/text"
+        android:cursorVisible="false"
+        android:textSize="16sp"
+        android:minHeight="100dp"
+        android:hint="Description"
+        android:padding="8dp"
+        android:gravity="start"
+        android:layout_marginHorizontal="16dp"
+        android:inputType="textVisiblePassword|textMultiLine"
+        android:background="@null"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</androidx.appcompat.widget.LinearLayoutCompat>
